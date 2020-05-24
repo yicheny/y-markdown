@@ -1,0 +1,92 @@
+$code_color:#f6f8fa;
+
+.y-markdown{
+  margin:30px 240px;
+  &_content{
+    flex-grow:1;
+    overflow: auto;
+  }
+  &_index{
+    margin: 32px 0 16px 16px;
+    max-width: 420px;
+    min-width: 240px;
+    overflow: auto;
+    span{
+      display: block;
+      margin: 4px 16px;
+      color:#1890ff;
+      cursor: pointer;
+      &.h2{
+        margin:4px 32px;
+      }
+      &.h3{
+        margin:4px 48px;
+      }
+      &.h4{
+        margin:4px 64px;
+      }
+      &.h5{
+        margin:4px 80px;
+      }
+      &.h6{
+        margin:4px 96px;
+      }
+    }
+  }
+  &_main{
+    flex-grow: 1;
+    overflow: auto;
+    margin:16px 0 0 32px;
+    padding-right: 16px;
+    max-width: 976px;
+    min-width:616px;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+  }
+  ul,li{
+    list-style: disc;
+  }
+  ul{
+    padding-inline-start: 40px;
+  }
+  p{
+    margin-bottom:.6em;
+    letter-spacing: .25px;
+  }
+  pre{//代码块区域
+    background: $code_color;
+    padding: 12px 16px;
+    border-radius: 4px;
+    code{
+      margin:0;
+      background: $code_color;
+    }
+  }
+  blockquote{
+    margin:4px 0;
+    padding: 3px 1em;
+    color: #6a737d;
+    //background: AliceBlue;
+    border-left: .25em solid #dfe2e5;
+    >p{
+      margin:0;
+    }
+  }
+  code{
+    margin: 0 4px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(27,31,35,.05);
+    font-size: 16px;
+  }
+
+  //字体大小和颜色
+  p,li{
+    color:#444;
+    font-size: 16px;
+  }
+}
