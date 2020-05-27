@@ -2,7 +2,6 @@ import React from 'react';
 import marked from "marked";
 import hljs from "highlight.js";
 import 'highlight.js/styles/github.css';
-import './Markdown.scss';
 
 marked.setOptions({
     renderer: new marked.Renderer(),
