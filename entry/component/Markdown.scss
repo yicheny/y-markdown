@@ -35,6 +35,14 @@ $code_color:#f6f8fa;
     margin-bottom:.6em;
     letter-spacing: .25px;
   }
+  a{
+    &:hover{
+      text-decoration: underline;
+      //outline-width: 0;
+    }
+    color: #0366d6;
+    text-decoration: none;
+  }
   pre{//代码块区域
     padding: 16px;
     overflow: auto;
