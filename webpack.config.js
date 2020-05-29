@@ -3,7 +3,7 @@ const HtmlWebpackPlugin  = require("html-webpack-plugin");
 
 //配置
 module.exports = {
-    entry: './entry',
+    entry: './demo',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'y-md-webpack.bundle.js'
@@ -41,7 +41,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "y-markdown",
-            template: './entry/index.html'
+            template: './demo/index.html'
         }),
     ]
 };
