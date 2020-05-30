@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin  = require("html-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 //配置
 module.exports = {
@@ -43,5 +44,6 @@ module.exports = {
             title: "y-markdown",
             template: './demo/index.html'
         }),
+        new CleanWebpackPlugin()
     ]
 };
