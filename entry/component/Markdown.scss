@@ -7,29 +7,20 @@ $code_color:#f6f8fa;
   line-height:1.5em;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 
-  &_content{
-    flex-grow:1;
-    overflow: auto;
-  }
-  &_main{
-    flex-grow: 1;
-    overflow: auto;
-    margin:16px 0 0 32px;
-    padding-right: 16px;
-    max-width: 976px;
-    min-width:616px;
-  }
-
   h1,h2,h3,h4,h5,h6{
     font-weight: 600;
     padding-bottom: .3em;
     border-bottom: 1px solid #eaecef;
   }
-  ul,li{
-    list-style: disc;
+  ol,ul{
+    //padding-inline-start: 40px;
+    padding-left:2em;
   }
-  ul{
-    padding-inline-start: 40px;
+  ul,ol,li{
+    //list-style: disc;
+  }
+  li+li{
+    margin-top: .25em;
   }
   p{
     margin-bottom:.6em;
@@ -92,7 +83,6 @@ $code_color:#f6f8fa;
     }
   }
 
-  //字体大小和颜色
   p,li{
     color:#444;
   }
