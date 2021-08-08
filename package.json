@@ -1,6 +1,6 @@
 {
   "name": "y-markdown",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "render markdown in browser",
   "main": "lib/index.js",
   "scripts": {
