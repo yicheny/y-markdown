@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect, useMemo} from 'react';
 import marked from "marked";
 import hljs from "highlight.js";
+import clsx from "clsx";
 
 marked.setOptions({
     renderer: new marked.Renderer(),
@@ -15,10 +16,15 @@ marked.setOptions({
     smartypants: false//是否使用更为时髦的标点，比如在引用语法中加入破折号。
 });
 
-function Markdown(props) {
-    const innerHtml = { __html: marked(props.children) };
+function Markdown({children,className,style,onMarked}) {
+    const innerHTML = useMemo(()=>marked(children),[children]);
+
+    useEffect(()=>{
+        if(onMarked && innerHTML) onMarked(innerHTML);
+    },[onMarked,innerHTML])
+
     return (
-        <div dangerouslySetInnerHTML={innerHtml} className='y-markdown'/>
+        <div dangerouslySetInnerHTML={{ __html: innerHTML }} className={clsx('y-markdown',className)} style={style}/>
     );
 }
 

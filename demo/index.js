@@ -4,7 +4,7 @@ import Markdown from "../entry/component/Markdown";
 import './index.scss';
 
 const App = ()=>{
-    return <Markdown>
+    return <Markdown onMarked={h => console.log('html',h)}>
         {require('./测试文档.md').default}
     </Markdown>;
 };
